@@ -7,9 +7,9 @@
                 </div>
                 <div class="flex items-center px-4">
                     <button id="hamburger" type="button" class="block absolute right-4 lg:hidden  ">
-                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span> 
-                        <span class="hamburger-line transition duration-300 ease-in-out"></span> 
-                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span> 
+                        <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
                     </button>
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white lg:border-transparent  border border-slate-300 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none  dark:bg-slate-900  lg:dark:bg-transparent dark:text-white  ">
                         <ul class="block lg:flex">
@@ -39,11 +39,11 @@
                                 <div id="dark" class="flex cursor-pointer ml-7 lg:ml-0 lg:mt-1">
                                     <span class="mr-2 text-md text-black dark:text-white">Mode </span>
                                     <span id="terang" class="flex">
-                                        <img  src="svg\idea.png" alt="#" width="30">
+                                        <img  src="{{ asset('svg/night-mode.png') }}" alt="#" width="30">
                                         <span class="ml-2 text-md text-slate-300 ">light</span>
                                     </span>
                                     <span id="gelap" class="hidden flex">
-                                        <img  src="svg\night-mode.png" alt="#" width="30">
+                                        <img  src="{{ asset('svg/night-mode.png') }}" alt="#" width="30">
                                         <span class="ml-2 text-md text-slate-700">dark</span>
                                     </span>
                                 </div>

@@ -1,8 +1,11 @@
-
-<label for="underline_select" class="sr-only">Underline select</label>
-<select id="underline_select" class="focus:text-gray-500 hover:text-primary2 font-base block py-2.5 px-0 w-full md:text-xl xl:text-2xl text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 focus:pl-2 peer">
-    <option selected>Categories</option>
-    @foreach ($categories as $category)
-    <option><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></option>
-    @endforeach
-</select>
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Categories <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+<!-- Dropdown menu -->
+<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+        @foreach ($categories as $category)
+      <li>
+        <a href="/categories/{{ $category->slug }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ $category->name }}</a>
+      </li>
+      @endforeach
+    </ul>
+</div>

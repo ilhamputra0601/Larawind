@@ -145,7 +145,7 @@
 
     <!-- Contact Section Start -->
     <section id="contact" class="pt-36 pb-32">
-        <div class="container"> 
+        <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Contact</h4>

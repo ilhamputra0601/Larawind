@@ -26,7 +26,13 @@ $(document).ready(function () {
     $(navMenu).slideToggle('slow');
     e.preventDefault();
   });
-  // Hamburger close offside belum di buat
+  // Hamburger close offside
+  $(document).click(function(e) {
+    if ($(hamburger).hasClass('hamburger-active') && $("#nav-menu").is(':visible') && !$(e.target).closest('#hamburger, #nav-menu').length) {
+        $(hamburger).removeClass('hamburger-active');
+        $(navMenu).slideUp('slow');
+    }
+});
 
   // darkmode
   const dark = $('#dark');
@@ -52,3 +58,4 @@ $(document).ready(function () {
 
   //pembungkus
 });
+
