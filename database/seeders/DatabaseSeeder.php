@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(3)->create();
+        User::factory(5)->create();
 
         User::factory()->create([
             'name' => 'Ilham Ramadhan',
@@ -29,13 +29,18 @@ class DatabaseSeeder extends Seeder
             'username'=>'fatma-ramadhan',
             'email' => 'siti.fatimathus@gmail.com',
         ]);
+        User::factory()->create([
+            'name' => 'alfarizi',
+            'username'=>'ocoy',
+            'email' => 'alfarizycoy@gmail.com',
+        ]);
 
         //
-        Post::factory(10)->create();
+        Post::factory(100)->create();
 
         //
         Category::factory()->create([
-            'name' => 'programing',
+            'name' => 'Programing',
             'slug' => 'programing',
         ]);
         Category::factory()->create([

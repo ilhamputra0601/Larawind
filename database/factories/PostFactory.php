@@ -20,10 +20,11 @@ class PostFactory extends Factory
             'user_id' => mt_rand(1,5),
             'category_id' =>mt_rand(1,3),
             'title' => fake()->sentence(mt_rand(2,8)),
-            'image' => fake()->imageUrl(360, 360, 'animals', true, 'dogs', true, 'jpg'),
             'slug' => fake()->slug(),
             'excerpt' => fake()->paragraph(),
-            'body' => fake()->paragraph(mt_rand(10,20)),
+            'body' => collect($this->faker->paragraphs(mt_rand(5,10)))
+                        ->map(fn($p)=> "<p class='mt-2 lg:mt-0 text-slate-600 dark:text-slate-300 sm:mt-4 sm:text-xl text-justify'>$p</p>")
+                        ->implode(''),
         ];
     }
 }

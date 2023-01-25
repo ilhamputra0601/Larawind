@@ -14,13 +14,13 @@
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white lg:border-transparent  border border-slate-300 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:max-w-full lg:bg-transparent lg:shadow-none lg:rounded-none  dark:bg-slate-900  lg:dark:bg-transparent dark:text-white  ">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="/#home" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($title ==="Home") ? 'text-primary2' : '' }} ">Beranda</a>
+                                <a href="/#home" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="home") ? 'text-primary2' : '' }} ">Beranda</a>
                             </li>
                             <li class="group">
                                 <a href="/#about" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex ">About</a>
                             </li>
                             <li class="group">
-                                <a href="/gallery" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($title ==="Gallery") ? 'text-primary2' : '' }}">Gallery</a>
+                                <a href="/gallery" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="gallery") ? 'text-primary2' : '' }}">Gallery</a>
                             </li>
                             <li class="group">
                                 <a href="/#portfolio" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">Portfolio</a>
@@ -29,7 +29,7 @@
                                 <a href="/#clients" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">Clients</a>
                             </li>
                             <li class="group">
-                                <a href="/blog" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($title ==="Blog") ? 'text-primary2' : '' }} ">Blog</a>
+                                <a href="/blog" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="blog") ? 'text-primary2' : '' }} ">Blog</a>
                             </li>
                             <li class="group">
                                 <a href="/#contact" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">Contact</a>

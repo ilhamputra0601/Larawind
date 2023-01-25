@@ -27,6 +27,4 @@ Route::get('/blog',[PostController::class,'index']);
 //Halaman single Post
 Route::get('/blog/{post:slug}',[PostController::class,'show']);
 
-Route::get('/categories/{category:slug}',[CategoryController::class,'show']);
 
-Route::get('/author/{author:username}',[UserController::class,'show']);

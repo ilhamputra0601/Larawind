@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignid('category_id');
             $table->foreignid('user_id');
             $table->string('title');
-            $table->string('image');
             $table->string('slug')->unique();
             $table->text('excerpt');
             $table->text('body');

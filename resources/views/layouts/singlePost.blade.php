@@ -15,10 +15,11 @@
                         class="text-primary">{{ $post->title }}</span>
                 </h3>
                 <h2
-                    class="mt-6 sm:mt-8 sm:text-2xl text-xl font-semibold bg-primary2  inline-block bg-clip-text text-transparent">
-                    By : {{$post->author->name}}</h2>
-                <p class="mt-2 lg:mt-0 text-slate-600  dark:text-slate-300 sm:mt-4 sm:text-xl text-justify">{!!
-                    $post->body !!}</p>
+                    class="mt-6 mb-3 sm:mt-8 sm:text-2xl text-xl font-semibold bg-primary2  inline-block bg-clip-text text-transparent">
+                  <a href="/blog?author={{ $post->author->username }}"> By : {{$post->author->name}}</a></h2>
+               <article>
+                   {!!$post->body !!}
+               </article>
                 <div class="mt-4 sm:mt-6">
                     <div class="flex item-center">
                         <!-- whatsApp -->
@@ -74,7 +75,7 @@
                 </div>
             </div>
             <div class=" my-auto hidden object-cover aspect-square lg:flex lg:w-1/2">
-                <img src="https://source.unsplash.com/600x400" alt="{{ $post->author->name }}"
+                <img src="https://source.unsplash.com/360x360?{{ $post->category->name }}" alt="{{ $post->author->name }}"
                     class=" object-cover rounded-3xl">
             </div>
         </div>
