@@ -9,7 +9,7 @@
                     <h1 class="text-base font-semibold text-primary2 md:text-xl lg:text-2xl ">Halo Semua 👋, saya <span class="block font-bold text-primary text-4xl md:text-5xl lg:text-7xl font-primary tracking-wider">Ilham Ramadhan</span></h1>
                     <h2 class=" text-other font-other font-medium text-lg mb-5 md:text-2xl lg:text-3xl">Programer   <span class="text-slate-900 dark:text-white">& </span> <span class="text-primary2 font-semibold">Designer</span> </h2>
                     <p class=" font-medium text-slate-500 mb-10 text-sm md:text-lg xl:text-xl dark:text-slate-300"> Menjadi Programer sangat mudah bukan. <span class="text-other font-semibold">bukan!</span> </p>
-                    <a id="darkmode" href="" class="bg-primary text-white inline-block py-2 px-5 rounded-full text-sm tracking-wider hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out md:scale-105 lg:scale-110 hover:text-white hover:bg-gradient-to-r  hover:from-primary  hover:to-primary2">Hubungi Saya</a>
+                    <a href="#contact" class="bg-primary text-white inline-block py-2 px-5 rounded-full text-sm tracking-wider hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out md:scale-105 lg:scale-110 hover:text-white hover:bg-gradient-to-r  hover:from-primary  hover:to-primary2">Hubungi Saya</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="mt-10 relative lg:mt-9 lg:right-0 ">

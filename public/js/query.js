@@ -83,6 +83,7 @@ $(document).ready(function () {
         clearInterval(xx);
         setTimeout(loopSlider(), time);
     }
+    //slider
     function sliderButton1() {
 
         $("#slider-2").fadeOut(400);

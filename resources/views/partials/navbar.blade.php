@@ -34,6 +34,9 @@
                             <li class="group">
                                 <a href="/#contact" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">Contact</a>
                             </li>
+                            <li class="group">
+                                <a href="/login" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">login</a>
+                            </li>
                                 <hr class="w-48 h-0.5 lg:w-0.5 lg:h-7 mx-auto lg:ml-1 my-4 lg:my-auto bg-slate-600 border-0 rounded lg:inline-block  lg:dark:bg-white ">
                             <li class="flex lg:items-center pl-8 mx-auto  ">
                                 <div id="dark" class="flex cursor-pointer ml-7 lg:ml-0 lg:mt-1">
