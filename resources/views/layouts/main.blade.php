@@ -175,11 +175,14 @@
         </div>
     </section>
     <!-- Contact Section End -->
+
+    @if (session()->has('logout'))
     <script>
-    //     Swal.fire(
-    //      'Welcome...',
-    //      'On my blog!',
-    //      'success'
-    //    )
-       </script>
+        Swal.fire(
+      'Logout succesfull!',
+      'See you again',
+      'success'
+    )
+    </script>
+    @endif
 @endsection

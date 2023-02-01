@@ -32,6 +32,7 @@
 
     @yield('container')
 
+
     @include('partials.footers')
 
     <!-- Back to Top Start -->
