@@ -1,4 +1,4 @@
-@extends('dashboard.index')
+@extends('dashboard.main')
 @section('container')
 
  <div class="p-4 sm:ml-64">

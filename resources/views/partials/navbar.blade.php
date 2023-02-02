@@ -16,7 +16,7 @@
                           <ul class="block lg:flex">
                               <li class="group">
                                   <a href="/#home"
-                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="home") ? 'text-primary2' : '' }} ">Beranda</a>
+                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ Request::is('/') ? 'text-primary2' : '' }} ">Beranda</a>
                               </li>
                               <li class="group">
                                   <a href="/#about"
@@ -24,7 +24,7 @@
                               </li>
                               <li class="group">
                                   <a href="/gallery"
-                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="gallery") ? 'text-primary2' : '' }}">Gallery</a>
+                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ Request::is('gallery') ? 'text-primary2' : '' }}">Gallery</a>
                               </li>
                               <li class="group">
                                   <a href="/#portfolio"
@@ -36,7 +36,7 @@
                               </li>
                               <li class="group">
                                   <a href="/blog"
-                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ ($active ==="blog") ? 'text-primary2' : '' }} ">Blog</a>
+                                      class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{  Request::is('blog') ? 'text-primary2' : '' }} ? 'text-primary2' : '' }} ">Blog</a>
                               </li>
                               <li class="group">
                                   <a href="/#contact"
@@ -89,7 +89,7 @@
                                               <div id="dark" class="flex cursor-pointer ml-7 lg:ml-0 lg:mt-1">
                                                   <span class="mr-2 text-md text-black dark:text-white">Mode </span>
                                                   <span id="terang" class="flex">
-                                                      <img src="{{ asset('svg/night-mode.png') }}" alt="#" width="30">
+                                                      <img src="{{ asset('svg/idea.png') }}" alt="#" width="30">
                                                       <span class="ml-2 text-md text-slate-300 ">light</span>
                                                   </span>
                                                   <span id="gelap" class="hidden flex">
@@ -104,7 +104,7 @@
                             </li>
                             @else
                             <li class="group">
-                                <a href="/login" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex">login</a>
+                                <a href="/login" class="text-base text-dark py-2 mx-8 group-hover:text-primary2 flex {{ Request::is('login') ? 'text-primary2' : '' }}">Login</a>
                             </li>
 
                             <hr class="w-48 h-0.5 lg:w-0.5 lg:h-7 mx-auto lg:ml-1 my-4 lg:my-auto bg-slate-600 border-0 rounded lg:inline-block  lg:dark:bg-white ">
@@ -112,7 +112,7 @@
                                 <div id="dark" class="flex cursor-pointer ml-7 lg:ml-0 lg:mt-1">
                                     <span class="mr-2 text-md text-black dark:text-white">Mode </span>
                                     <span id="terang" class="flex">
-                                        <img src="{{ asset('svg/night-mode.png') }}" alt="#" width="30">
+                                        <img src="{{ asset('svg/idea.png') }}" alt="#" width="30">
                                         <span class="ml-2 text-md text-slate-300 ">light</span>
                                     </span>
                                     <span id="gelap" class="hidden flex">

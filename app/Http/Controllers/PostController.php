@@ -11,16 +11,12 @@ class PostController extends Controller
 {
    public function home()
    {
-    return view('layouts.main',[
-        "active" => "home",
-    ]);
+    return view('layouts.index');
    }
 
    public function gallery()
     {
-    return view('layouts.gallery',[
-        "active" => "gallery"
-    ]);
+    return view('layouts.gallery');
     }
 
    public function index()
@@ -38,7 +34,6 @@ class PostController extends Controller
         }
     return view('layouts.blog',[
         "judul" => "Tulisan Terkini $title",
-        "active" => "blog",
         "posts" => Post::latest()->filter(request(['search','category','author']))->paginate(11)->withQueryString(),
         'categories'=> Category::all(),
     ]);
@@ -47,8 +42,6 @@ class PostController extends Controller
    public function show(Post $post)
    {
     return view('layouts.singlePost',[
-        "title" => "Single Post",
-        "active" => "Single Post",
         "post" => $post
     ]);
    }

@@ -1,7 +1,7 @@
-@extends('index')
+@extends('main')
 
 @section('container')
-    
+
  <!-- Section Gallery Start -->
  <section id="gallery" class="pt-36 pb-32 ">
     <div class="container">
@@ -25,7 +25,7 @@
             <img src="img/gallery/3.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>
         </div>
         <div class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden  relative group  hover:scale-95 transition-all duration-500">
-            <img src="img/gallery/4.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>  
+            <img src="img/gallery/4.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>
         </div>
         <div class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden  relative group  hover:scale-95 transition-all duration-500">
             <img src="img/gallery/5.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>
@@ -43,7 +43,7 @@
             <img src="img/gallery/9.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>
         </div>
         <div class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden  relative group  hover:scale-95 transition-all duration-500 md:col-start-3">
-            <img src="img/gallery/10.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>  
+            <img src="img/gallery/10.jpg" class="w-full h-full object-cover object-center absolute group-hover:scale-110 grayscale hover:grayscale-0 transition-all duration-500"></img>
         </div>
     </div>
 </section>

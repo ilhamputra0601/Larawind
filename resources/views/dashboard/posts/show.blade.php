@@ -1,9 +1,9 @@
-@extends('main')
+@extends('dashboard.main')
 
 @section('container')
 
-<section id="singlePost" class="pt-36 pb-32">
-    <article class="container">
+<div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
 
         <div
             class="container mt-14 px-6 font-hamz  mx-auto max-w-md sm:max-w-xl md:max-w-5xl lg:max-w-full lg:px-0 lg:flex">
@@ -75,14 +75,14 @@
                 </div>
             </div>
             <div class=" my-auto hidden object-cover aspect-square lg:flex lg:w-1/2">
-                <img src="https://source.unsplash.com/360x360?{{ $post->category->name }}" alt="{{ $post->author->name }}"
+                <img src="https://source.unsplash.com/360x360?{{ $post->category }}" alt="{{ $post->author }}"
                     class=" object-cover rounded-3xl">
             </div>
         </div>
-        <button type="button" onclick=location.href="/blog"
+        <button type="button" onclick=location.href="/dashboard/posts"
             class="mt-10 ml-6 lg:ml-12 lg:-mt-10 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-xl px-5 py-2.5 text-center mr-2 mb-2">Back</button>
-</section>
-</article>
+    </div>
+</div>
 <!-- javaScript -->
-<script src="..\js\query.js"></script>
+<script src="..\..\js\query.js"></script>
 @endsection

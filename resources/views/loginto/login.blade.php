@@ -1,4 +1,4 @@
-@extends('index')
+@extends('main')
 
 @section('container')
 <section id="blog" class="pt-36 pb-32 bg-sky-100 dark:bg-slate-900 ">
@@ -16,7 +16,7 @@
         <div>
             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white @error('email') text-red-600 dark:text-red-500 @enderror">Your email</label>
             <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300  @error('email') border-red-600 dark:border-red-600
-            @enderror text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autofocus placeholder="name@company.com" required value="{{ old('email') }}">
+            @enderror text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autofocus placeholder="name@company.com"  value="{{ old('email') }}"required>
             @error('email')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}</p> @enderror
         </div>
         <div>

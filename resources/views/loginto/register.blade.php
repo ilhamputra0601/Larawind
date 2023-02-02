@@ -1,4 +1,4 @@
-@extends('index')
+@extends('main')
 
 @section('container')
 <section id="blog" class="pt-36 pb-32 bg-sky-100 dark:bg-slate-900 ">

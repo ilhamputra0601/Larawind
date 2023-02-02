@@ -16,7 +16,6 @@ class RegisterController extends Controller
     public function index()
     {
         return view ('loginto.register',[
-            'active' => 'register'
         ]);
     }
 
