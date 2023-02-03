@@ -32,7 +32,7 @@
                     <h4 class="font-bold uppercase text-primary text-lg font-other mb-3">Tentang Saya </h4>
                     <h2 class="font-bold text-4xl mb-5 max-w-md  lg:text-4xl dark:text-white">Halo, Perkenalkan  Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-other/60 via-other/80 dark:from-other/80 dark:via-other/90 dark:to-other to-other selection:text-other ">Ilham Putra Ramadhan</span> </h2>
                     <p class="font-medium text-base lg:text-lg text-secondary max-w-lg dark:text-slate-300
-                    ">Saya Membuat Website ini dari nol hingga sampai sekarang ini, saya membuat website ini untuk memposting hasil karya anda Seperti skill design dan programing anda mungkin jika ingin melihatnya lebih lanjut anda bisa berpindah ke bagian <a href="/blog"
+                    ">Saya Membuat Website ini dari nol hingga sampai sekarang , website ini dibuat untuk memposting hasil Karya Seperti Design dan programing atau lain-lainnya, mungkin jika ingin melihatnya lebih lanjut anda bisa berpindah ke bagian <a href="/blog"
                     class="text-primary2 hover:text-primary ">Blog </a>.</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
@@ -120,7 +120,7 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Clients</h4>
                     <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Yang Pernah bekerjasama</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin terlihat serius Padahal ini adalah angan-angan saja, berikut di bawah ini adalah Search .</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin terlihat serius Padahal ini adalah angan-angan saja, berikut di bawah ini adalah Search Engine dan framework untuk membuat Website ini.</p>
                 </div>
             </div>
             <div class="w-full px-4">
@@ -150,7 +150,7 @@
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Contact</h4>
-                    <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Hubungi Kami</h2>
+                    <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Hubungi Saya</h2>
                     <p class="font-medium text-md text-secondary md:text-lg">Mungkin bila ada kekurangan atau yang tidak mengenakan hati bisa hubungi Saya dengan cara mengisi Form di bawah ini.</p>
                 </div>
             </div>
