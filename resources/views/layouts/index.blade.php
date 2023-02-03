@@ -8,7 +8,7 @@
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h1 class="text-base font-semibold text-primary2 md:text-xl lg:text-2xl ">Halo Semua 👋, saya <span class="block font-bold text-primary text-4xl md:text-5xl lg:text-7xl font-primary tracking-wider">Ilham Ramadhan</span></h1>
                     <h2 class=" text-other font-other font-medium text-lg mb-5 md:text-2xl lg:text-3xl">Programer   <span class="text-slate-900 dark:text-white">& </span> <span class="text-primary2 font-semibold">Designer</span> </h2>
-                    <p class=" font-medium text-slate-500 mb-10 text-sm md:text-lg xl:text-xl dark:text-slate-300"> Menjadi Programer sangat mudah bukan. <span class="text-other font-semibold">bukan!</span> </p>
+                    <p class=" font-medium text-slate-500 mb-10 text-sm md:text-lg xl:text-xl dark:text-slate-300"> Menjadi Programer sangat mudah bukan. <span class="text-other font-semibold">hmmm!</span> </p>
                     <a href="#contact" class="bg-primary text-white inline-block py-2 px-5 rounded-full text-sm tracking-wider hover:shadow-lg hover:scale-110 transition duration-500 ease-in-out md:scale-105 lg:scale-110 hover:text-white hover:bg-gradient-to-r  hover:from-primary  hover:to-primary2">Hubungi Saya</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
@@ -30,14 +30,15 @@
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg font-other mb-3">Tentang Saya </h4>
-                    <h2 class="font-bold text- text-2xl mb-5 max-w-md  lg:text-3xl dark:text-white">Yuk, belajar pemograman bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-other/60 via-other/80 dark:from-other/80 dark:via-other/90 dark:to-other to-other selection:text-other ">Ilham Ramadhan</span> </h2>
+                    <h2 class="font-bold text-4xl mb-5 max-w-md  lg:text-4xl dark:text-white">Halo, Perkenalkan  Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-other/60 via-other/80 dark:from-other/80 dark:via-other/90 dark:to-other to-other selection:text-other ">Ilham Putra Ramadhan</span> </h2>
                     <p class="font-medium text-base lg:text-lg text-secondary max-w-lg dark:text-slate-300
-                    ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugiat perspiciatis, obcaecati quae fuga earum possimus, cum odit laboriosam sunt libero atque? Expedita dolore provident eius, magni at dicta illo.</p>
+                    ">Saya Membuat Website ini dari nol hingga sampai sekarang ini, saya membuat website ini untuk memposting hasil karya anda Seperti skill design dan programing anda mungkin jika ingin melihatnya lebih lanjut anda bisa berpindah ke bagian <a href="/blog"
+                    class="text-primary2 hover:text-primary ">Blog </a>.</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
                     <h3 class="font-semibold text-2xl lg:text-3xl mb-4 lg:pt-10 dark:text-white">Mari Berteman</h3>
                     <P class="font-medium text-base lg:text-lg text-secondary max-w-lg mb-6 dark:text-slate-300
-                    ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ducimus dolor incidunt dolores temporibus vitae libero quas quae ab consequatur aliquam placeat magnam odio nam, sunt officia rerum fuga saepe.</P>
+                    ">Jika kalian ingin mengetahui saya lebih lanjut mungkin kita bisa berteman dangan mengklik akun yang ada di bawah ini.</P>
                     <div class="flex item-center">
                         <!-- whatsApp -->
                         <a class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-secondary text-secondary dark:text-slate-300 dark:border-slate-300 hover:text-white hover:bg-gradient-to-r  hover:from-primary  hover:via-other  hover:to-primary2 transition duration-500 ease-in-out" target="_blank" href="https://wa.me/6289658591537?text=Hallo%20Ilham%20Ganteng">
@@ -72,7 +73,7 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Portfolio</h4>
                     <h2 class="mb-4 text-primary font-bold text-dark text-2xl md:text-3xl lg:text-4xl ">Project Terbaru</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit debitis eius inventore voluptas nemo laudantium in alias distinctio explicabo nam.</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Selain suka Progaming saya pun juga hoby Design.</p>
                 </div>
             </div>
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto ">
@@ -80,22 +81,22 @@
                     <div class="rounded-md shadow-md overflow-hidden ">
                         <img src="img\portfolio\maulid 2.png" alt="maulid alakhyar">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Ilham Ramadhan</h3>
-                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nisi eius repellat!</p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Banner Masjid Al-Akhyar</h3>
+                    <p class="font-medium text-base text-secondary">saya membuat ini ketika acara Maulid nabi pada tahun 2022.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img class="aspect-video" src="img\portfolio\baliho(4x5).png" alt="baliho al-ikhlas">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Ilham Ramadhan</h3>
-                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nisi eius repellat!</p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Banner Masjid Jami' AL-ikhlas</h3>
+                    <p class="font-medium text-base text-secondary">saya membuat ini ketika acara Maulid nabi pada tahun 2022.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="img\portfolio\sekenario panggung.png" alt="sekenario panggung">
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Ilham Ramadhan</h3>
-                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nisi eius repellat!</p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Panggung 2D Masjid Jami' AL-ikhlas</h3>
+                    <p class="font-medium text-base text-secondary">Saya membuat gambaran design ini untuk panggung Maulid Nabi.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
@@ -104,8 +105,8 @@
                             Browsermu tidak mendukung tag ini, upgrade donk!
                           </video>
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Ilham Ramadhan</h3>
-                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nisi eius repellat!</p>
+                    <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Panggung 3D Masjid Jami' AL-ikhlas</h3>
+                    <p class="font-medium text-base text-secondary">Saya membuat Design tiga Dimensi ini untuk panggung Maulid Nabi, agar para pemasang panggung lebih paham konsepnya.</p>
                 </div>
             </div>
         </div>
@@ -119,7 +120,7 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Clients</h4>
                     <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Yang Pernah bekerjasama</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum non at ut!</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin terlihat serius Padahal ini adalah angan-angan saja, berikut di bawah ini adalah Search .</p>
                 </div>
             </div>
             <div class="w-full px-4">
@@ -150,7 +151,7 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Contact</h4>
                     <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Hubungi Kami</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit debitis eius inventore voluptas nemo laudantium in alias distinctio explicabo nam.</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin bila ada kekurangan atau yang tidak mengenakan hati bisa hubungi Saya dengan cara mengisi Form di bawah ini.</p>
                 </div>
             </div>
             <form action="">
