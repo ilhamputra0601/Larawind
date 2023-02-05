@@ -22,8 +22,6 @@ Route::get('/gallery',[PostController::class,'gallery']);
 
 
 Route::get('/blog',[PostController::class,'index']);
-
-//Halaman single Post
 Route::get('/blog/{post:slug}',[PostController::class,'show']);
 
 Route::resource('/register',RegisterController::class,)->middleware('guest');
