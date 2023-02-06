@@ -17,7 +17,7 @@
                 <h2
                     class="mt-6 mb-3 sm:mt-8 sm:text-2xl text-xl font-semibold bg-primary2  inline-block bg-clip-text text-transparent">
                   <a href="/blog?author={{ $post->author->username }}"> By : {{$post->author->name}}</a></h2>
-               <article>
+               <article class="mt-2 lg:mt-0 text-slate-600 dark:text-slate-300 sm:mt-4 sm:text-xl text-justify">
                    {!!$post->body !!}
                </article>
                 <div class="mt-4 sm:mt-6">

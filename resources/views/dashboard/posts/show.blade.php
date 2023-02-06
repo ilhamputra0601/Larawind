@@ -24,7 +24,7 @@
                         class="text-primary">{{ $post->title }}</span>
                 </h3>
 
-               <article>
+               <article class="mt-2 lg:mt-0 text-slate-600 dark:text-slate-300 sm:mt-4 sm:text-xl text-justify">
                    {!!$post->body !!}
                </article>
             </div>

@@ -37,7 +37,7 @@
                 <br>
                 </div>
 
-                <div id="slider-2" class="container mx-auto">
+                {{-- <div id="slider-2" class="container mx-auto">
                     <div class="bg-cover relative bg-center h-auto text-white py-24 px-10 object-fill" >
                         <a href="/blog/{{ $posts[1]->slug }}"><img  class="rounded-lg w-full " src="https://source.unsplash.com/1200x400?{{ $posts[1]->category->name }} alt="{{ $posts[1]->category->name }}"></a>
                             <div class="md:w-1/2 absolute xl:-mt-48 ml-10 left-0">
@@ -51,7 +51,7 @@
                           </div>
                     </div> <!-- container -->
                 <br>
-                </div>
+                </div> --}}
                 <div  class="flex justify-between w-12 mx-auto pb-2 mb-10 ">
                        <button id="sButton1" onclick="sliderButton1()" class="bg-sky-400 rounded-full w-4 pb-2 " ></button>
                    <button id="sButton2" onclick="sliderButton2() " class="bg-sky-400 rounded-full w-4 p-2"></button>
