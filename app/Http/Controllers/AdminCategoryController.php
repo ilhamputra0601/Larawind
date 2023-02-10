@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
-class RegisterController extends Controller
+class AdminCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,8 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return view ('loginto.register',[
+        return view('dashboard.admin.categories.index',[
+            'categories' => Category::all()
         ]);
     }
 
@@ -37,27 +38,23 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'username' => 'required|min:3|max:255|unique:users',
-            'email' => 'required|email:dns|unique:users',
-            'password' => 'required|min:5|confirmed',
-            
+            'name' =>'max:255',
+            'slug' => 'required|unique:categories',
         ]);
-        $validatedData['password'] = Hash::make($validatedData['password']);
 
-        User::create($validatedData);
-        // @dd(' succesfull!');
-        return redirect('/login')->with('success','Registration succesfull! Please login');
+        Category::create($validatedData);
+        return back()->with('succcess','berhasil');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Category $category)
     {
         //
     }
@@ -65,10 +62,10 @@ class RegisterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Category $category)
     {
         //
     }
@@ -77,10 +74,10 @@ class RegisterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -88,11 +85,19 @@ class RegisterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+        return back()->with('succcess','berhasil');
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Category::class, 'slug', $request->name );
+       return response()->json(['slug'=> $slug]);
     }
 }
+

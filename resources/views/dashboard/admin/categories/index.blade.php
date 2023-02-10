@@ -10,17 +10,15 @@
         <div class="w-full lg:w-5/6">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
-                    <h2 class=" font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">All Posts</h2>
-                    <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">My Posts</h4>
+                    <h2 class=" font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Category</h2>
+                    <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Edit Categories</h4>
                     {{-- <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Odit debitis eius inventore voluptas nemo laudantium in alias distinctio explicabo
                         nam.</p> --}}
                 </div>
             </div>
             <div class="mb-4">
-                <div class="flex justify-end" onclick="location.href='/dashboard/posts/create'">
-                  <button class="px-4 py-2 rounded-md bg-sky-500 text-sky-100 hover:bg-sky-600">Create Post</button>
-                </div>
+
               </div>
               <div class="flex flex-col">
                 <div class="overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
@@ -29,74 +27,43 @@
                       <thead>
                         <tr>
                           <th
-                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                            NO</th>
+                            class="px-9 py-3 ml-2 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                            No</th>
                           <th
-                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                            Title</th>
+                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left  text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                            Id</th>
                           <th
-                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                            Description</th>
-                          <th
-                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                             Categories</th>
                           <th
-                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
-                            Created_At</th>
-                          <th class="px-6 py-3 text-sm text-left text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">
+                            class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-center text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                            Slug</th>
+                          <th class="px-6 py-3 text-sm text-center text-gray-500 border-b border-gray-200 bg-gray-50" colspan="3">
                             Action</th>
                         </tr>
                       </thead>
 
-                      <tbody class="bg-white" >
-                        @foreach ($posts as $post)
-                        <tr onclick="location.href='/dashboard/posts/{{ $post->slug }}'" class="hover:bg-slate-200 cursor-pointer">
-                          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                      <tbody class="bg-white">
+                        @foreach ($categories as $category)
+                        <tr>
+                          <td class="px-6 py-4 pl-10 whitespace-no-wrap border-b border-gray-200">
                             <div class="flex items-center">
                                 {{ $loop->iteration }}
                             </div>
-
-                          </td>
-
-                          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            <div class="text-sm leading-5 text-gray-900">{{ $post->title }}
-                            </div>
-                          </td>
-
-                          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                            <p>{{ $post->excerpt }}</p>
-                          </td>
-
-                          <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-                            <span>{{ $post->category->name }}</span>
-                          </td>
-                          <td class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-                            <span>{{ $post->created_at }}</span>
-                          </td>
-                            {{-- edit --}}
-                          <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                            <a href="/dashboard/posts/{{ $post->slug }}/edit" class="text-indigo-600 hover:text-indigo-900">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                              </svg>
-                            </a>
                         </td>
-                            {{-- show --}}
-                          <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                            <a href="/dashboard/posts/{{ $post->slug }}" class="text-gray-600 hover:text-gray-900">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                              </svg>
-                            </a>
+                          <td class="px-6 py-4 text-sm text-center text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                            <div class="flex items-center">
+                                {{ $category->id }}
+                            </div>
+                        </td>
+                          <td class="px-6 py-4 text-sm text-center text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                            <span>{{ $category->name }}</span>
+                          </td>
+                          <td class="px-6 py-4 text-sm text-center text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                            <span>{{ $category->slug }}</span>
                           </td>
                           {{-- delete --}}
-                          <td class="text-sm font-medium leading-5 whitespace-no-wrap border-b border-gray-200 ">
+                          <td class="text-sm font-medium text-center whitespace-no-wrap border-b border-gray-200 ">
                             <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="text-indigo-600 hover:text-indigo-900" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600 hover:text-red-800"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +83,7 @@
                                         <div class="p-6 text-center">
                                             <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                             <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete this post?</h3>
-                                            <form action="/dashboard/posts/{{ $post->slug }}" method="post">
+                                            <form action="/admin/categories/{{ $category->id }}" method="post">
                                                 @method('delete')
                                                 @csrf
                                                 <button data-modal-hide="popup-modal" type="submit" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
@@ -133,7 +100,35 @@
                         @endforeach
                       </tbody>
                     </table>
-                  </div>
+
+                </div>
+                <form action="/admin/categories" method="post">
+                    @csrf
+                <div class="flex flex-wrap justify-start">
+                    <div class="my-3 w-1/3">
+                        <label for="name"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white @error('name') text-red-600 dark:text-red-500 @enderror">Category Name</label>
+                        <input type="text" id="name" name="name"
+                            class="block p-2.5 w-full text-sm text-gray-900 @error('title') border-red-600 dark:border-red-600 @enderror bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Write your title here..." autofocus required
+                            value="{{ old('name') }}">
+                        @error('name')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span
+                                class="font-medium">Oops!</span> {{ $message }}</p> @enderror
+                    </div>
+                    <div class="mt-6 mx-3">
+                        <button type="submit" class="px-4 my-3 py-3 rounded-md bg-sky-500 text-sky-100 hover:bg-sky-600">Create Category</button>
+                      </div>
+                      <div class="mb-3">
+                        <label for="slug"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white @error('slug') text-red-600 dark:text-red-500 @enderror">Slug</label>
+                        <input type="text" id="slug" name="slug"
+                            class="block p-2.5 w-full text-sm text-gray-900 @error('slug') border-red-600 dark:border-red-600 @enderror bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Write your Slug here..." required value="{{ old('slug') }}">
+                        @error('slug')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span
+                                class="font-medium">Oops!</span> {{ $message }}</p> @enderror
+                    </div>
+                </div>
+            </form>
                 </div>
               </div>
         </div>
@@ -142,9 +137,16 @@
 </div>
 </div>
 
-
-
-
+<script>
+  // slugable
+    const name = document.querySelector('#name');
+    const slug = document.querySelector('#slug');
+    title.addEventListener('change', function () {
+        fetch('/admin/categories/checkSlug?name=' + name.value)
+            .then(response => response.json())
+            .then(data => slug.value = data.slug)
+    });
+</script>
 
 @if (session()->has('success'))
 <script>
@@ -177,5 +179,5 @@
 @endif
 
 <!-- javaScript -->
-<script src="{{ asset('js\query.js') }}"></script>
+{{-- <script src="{{ asset('js\query.js') }}"></script> --}}
 @endsection

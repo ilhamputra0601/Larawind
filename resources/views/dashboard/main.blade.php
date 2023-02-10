@@ -23,7 +23,7 @@
      <style>
           trix-toolbar [data-trix-button-group ="file-tools"] {
               display: none;
-              
+
           }
       </style>
 
@@ -64,7 +64,7 @@
     <!-- Back to Top End -->
 
     <!-- javaScript -->
-    <script src="js/query.js"></script>
+    {{-- <script src="js/query.js"></script> --}}
     {{-- flowbitejs --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 

@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SendMailController;
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\SettingProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +33,8 @@ Route::get('/login',[LoginController::class,'index'])->name('login')->middleware
 Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 
+Route::resource('user', UserController::class);
+
 Route::get('/dashboard',function(){
     return view ('dashboard.layouts.dashboard');
 })->middleware('auth');
@@ -37,6 +42,12 @@ Route::get('/dashboard',function(){
 Route::get('/dashboard/posts/checkSlug',[DashboardPostController::class,'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
+Route::get('/admin/categories/checkSlug',[AdminCategoryController::class,'checkSlug'])->middleware('admin');
+Route::resource('/admin/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+Route::resource('setting/profile',SettingProfileController::class);
+
+Route::post('/', [SendMailController::class,'send'])->name('contact.send');
 
 
 

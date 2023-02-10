@@ -29,8 +29,11 @@
                </article>
             </div>
             <div class=" my-auto hidden object-cover aspect-square lg:flex lg:w-1/2">
-                <img src="https://source.unsplash.com/360x360?{{ $post->category }}" alt="{{ $post->author }}"
-                    class=" object-cover rounded-3xl">
+                @if ($post->image)
+                <img src="{{ asset('storage/'. $post->image) }}" alt="{{ $post->author }}" class=" object-cover rounded-3xl">
+                @else
+                <img src="https://source.unsplash.com/360x360?{{ $post->category }}" alt="{{ $post->author }}" class=" object-cover rounded-3xl">
+                @endif
             </div>
         </div>
         {{-- back --}}
@@ -77,5 +80,5 @@
     </div>
 </div>
 <!-- javaScript -->
-<script src="..\..\js\query.js"></script>
+<script src="{{ asset('js\query.js') }}"></script>
 @endsection

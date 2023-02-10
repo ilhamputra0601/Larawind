@@ -46,8 +46,23 @@
     {{-- flowbitejs --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 
+    {{-- anti copy --}}
+    {{-- <script>
+        if (typeof document.onselectstart!="undefined") {
 
+document.onselectstart=new Function ("return false");
 
+}
+
+else{
+
+document.onmousedown=new Function ("return false");
+
+document.onmouseup=new Function ("return true");
+
+}
+
+    </script> --}}
 </body>
 
 </html>

@@ -3,7 +3,7 @@
           <div class="container">
               <div class="flex item-center justify-between relative">
                   <div class="px-4">
-                      <a href="/#home" class="font-bold text-lg text-primary block py-6">Hamz</a>
+                      <a href="/#home" class="font-bold text-lg text-primary block py-6">Larawind</a>
                   </div>
                   <div class="flex items-center px-4">
                       <button id="hamburger" type="button" class="block absolute right-4 lg:hidden  ">
@@ -68,12 +68,8 @@
                                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                                           </li>
                                           <li>
-                                              <a href="#"
+                                              <a href="setting/profile"
                                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-                                          </li>
-                                          <li>
-                                              <a href="#"
-                                                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
                                           </li>
                                           <li>
                                               <form action="/logout" method="post">

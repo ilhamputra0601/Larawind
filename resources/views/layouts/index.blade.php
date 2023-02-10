@@ -151,22 +151,23 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary2 mb-2 lg:text-2xl md:text-xl">Contact</h4>
                     <h2 class="mb-4 font-bold text-primary text-2xl md:text-3xl lg:text-4xl ">Hubungi Saya</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin bila ada kekurangan atau yang tidak mengenakan hati bisa hubungi Saya dengan cara mengisi Form di bawah ini.</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Mungkin bila ada yang ingin di sampaikan bisa hubungi Saya dengan cara mengisi Form di bawah ini.</p>
                 </div>
             </div>
-            <form action="">
+            <form action="{{ route('contact.send') }}" method="post">
+                @csrf
                 <div class="w-full lg:w-2/3 lg:mx-auto">
                 <div class="w-full px-4 mb-8">
                     <label for="name" class="text-base text-primary font-bold">Nama</label>
-                    <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:outline-primary2 caret-pink-500">
+                    <input type="text" id="name" name="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:outline-primary2 caret-pink-500">
                 </div>
-                <div id="emai" class="w-full px-4 mb-8 group">
-                    <label id="ema" for="email" class="text-base text-primary font-bold ">Email</label>
-                    <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none  focus:outline-primary2 focus:ring-1  caret-pink-500">
+                <div id="email" class="w-full px-4 mb-8 group">
+                    <label id="email" for="email" class="text-base text-primary font-bold ">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none  focus:outline-primary2 focus:ring-1  caret-pink-500">
                 </div>
                 <div class="w-full px-4 mb-8">
-                    <label for="pesan" class="text-base text-primary font-bold">Pesan</label>
-                    <textarea type="text" id="pesan" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:outline-primary2 h-32 caret-pink-500"></textarea>
+                    <label for="message" class="text-base text-primary font-bold">Pesan</label>
+                    <textarea type="text" id="message" name="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-1 focus:outline-primary2 h-32 caret-pink-500"></textarea>
                 </div>
                 <div class="w-full">
                     <button class="text-base font-semibold text-white bg-primary2 py-3 w-full px-8 rounded-full hover:bg-gradient-to-r  hover:from-primary  hover:to-primary2 hover:shadow-lg transition duration-500 ease-in-out">Kirim</button>
@@ -182,6 +183,15 @@
         Swal.fire(
       'Logout succesfull!',
       'See you again',
+      'success'
+    )
+    </script>
+    @endif
+    @if (session()->has('success'))
+    <script>
+        Swal.fire(
+      'message sent succesfull!',
+      'Thanks for contacting us!',
       'success'
     )
     </script>

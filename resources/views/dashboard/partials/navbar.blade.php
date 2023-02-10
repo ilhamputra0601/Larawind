@@ -8,7 +8,7 @@
                 </svg>
              </button>
             <div class="px-4">
-                <a href="/#home" class="font-bold text-lg text-primary block py-2">Hamz</a>
+                <a href="/#home" class="font-bold text-lg text-primary block py-2">Welcome, {{ auth()->user()->name }}</a>
             </div>
 
             <div class="flex items-center px-4">
@@ -58,15 +58,22 @@
                                 id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                                 data-dropdown-placement="bottom">
                                 <span class="sr-only">Open user menu</span>
-                                <img class="w-8 h-8 rounded-full"
-                                    src="https://source.unsplash.com/600x400?profile" alt="user photo">
+                                {{-- @if ()
+                                <img class="w-8 h-8 rounded-full" src="https://source.unsplash.com/600x400?profile" alt="user photo">
+                                @else --}}
+                                <span class="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100">
+                                    <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                    </svg>
+                                  </span>
+                                {{-- @endif --}}
                             </button>
                             <!-- Dropdown menu -->
                             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
                                 id="user-dropdown">
                                 <div class="px-4 py-3">
                                     <span
-                                        class="block text-sm text-gray-900 dark:text-white">{{ auth()->user()->name }}</span>
+                                        class="block text-sm text-gray-900 dark:text-white">{{ auth()->user()->name }} ( {{ auth()->user()->username }} )</span>
                                     <span
                                         class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">{{ auth()->user()->email }}</span>
                                 </div>
@@ -76,12 +83,8 @@
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="setting/profile"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
                                     </li>
                                     <li>
                                         <form action="/logout" method="post">

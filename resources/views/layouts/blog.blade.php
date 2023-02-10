@@ -37,7 +37,7 @@
                 <br>
                 </div>
 
-                {{-- <div id="slider-2" class="container mx-auto">
+                <div id="slider-2" class="container mx-auto">
                     <div class="bg-cover relative bg-center h-auto text-white py-24 px-10 object-fill" >
                         <a href="/blog/{{ $posts[1]->slug }}"><img  class="rounded-lg w-full " src="https://source.unsplash.com/1200x400?{{ $posts[1]->category->name }} alt="{{ $posts[1]->category->name }}"></a>
                             <div class="md:w-1/2 absolute xl:-mt-48 ml-10 left-0">
@@ -51,7 +51,7 @@
                           </div>
                     </div> <!-- container -->
                 <br>
-                </div> --}}
+                </div>
                 <div  class="flex justify-between w-12 mx-auto pb-2 mb-10 ">
                        <button id="sButton1" onclick="sliderButton1()" class="bg-sky-400 rounded-full w-4 pb-2 " ></button>
                    <button id="sButton2" onclick="sliderButton2() " class="bg-sky-400 rounded-full w-4 p-2"></button>
@@ -64,18 +64,16 @@
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 static">
                     <a href="/blog?category={{ $post->category->slug }}">
                     <div class="absolute bg-white rounded-r-md mt-72 bg-opacity-80 "><span class="py-5 px-5 font-base text-2xl">{{ $post->category->name }}</span></div></a>
+                    @if ($post->image)
+                    <a href="/blog/{{ $post->slug }}"><img src="{{ asset('storage/'. $post->image)  }}" alt="programing" class="w-full"></a>
+                    @else
                     <a href="/blog/{{ $post->slug }}"><img src="https://source.unsplash.com/360x360?{{ $post->category->name }}" alt="programing" class="w-full"></a>
+                    @endif
                     <div class="py-8 px-6">
-                        <h2> <a href="/blog/{{ $post->slug }}"
-                                class="block mb-2 font-bold hover:text-primary text-2xl truncate ">
-                                {{ $post->title }}</a>
-                        </h2>
-                        <h3 class="font-semibold text-slate-600">By : <a
-                                href="/blog?author={{ $post->author->username }}">{{ $post->author->name}}</a></h3>
+                        <h2> <a href="/blog/{{ $post->slug }}" class="block mb-2 font-bold hover:text-primary text-2xl truncate ">{{ $post->title }}</a></h2>
+                        <h3 class="font-semibold text-slate-600">By :<a href="/blog?author={{ $post->author->username }}">{{ $post->author->name}} </a></h3>
                         <p class="font-medium text-base text-secondary mb-6 truncate">{{ $post->excerpt }}</p>
-                        <a href="/blog/{{ $post->slug }}"
-                            class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 hover:shadow-lg">Baca
-                            Selengkapnya</a>
+                        <a href="/blog/{{ $post->slug }}"class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80 hover:shadow-lg">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>

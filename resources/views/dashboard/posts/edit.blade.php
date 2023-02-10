@@ -26,9 +26,11 @@
                     </button>
 
 
-                    <form method="post" action="/dashboard/posts/{{ $post->slug }}">
+                    <form method="post" action="/dashboard/posts/{{ $post->slug }}" enctype="multipart/form-data">
                         @method('put')
                         @csrf
+                        <div class="flex flex-wrap">
+                        <div class="w-1/2 pr-3">
                         <div class="mb-3">
                             <label for="title"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white @error('title') text-red-600 dark:text-red-500 @enderror">Title</label>
@@ -65,6 +67,31 @@
                                 @endforeach
                             </select>
                         </div>
+                        </div>
+                        <div class=" w-1/2 pl-3 ">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white  @error('image') text-red-600 dark:text-red-500 @enderror" for="image">Upload Image</label>
+                            <div class="flex items-center justify-center w-full ">
+                                {{-- img preview --}}
+                                <img class="h-auto max-w-xs img-preview rounded-lg hidden mr-6" >
+                                {{-- end preview --}}
+                                <label for="image" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                        @if ($errors->has('image'))
+                                             @error('image')
+                                             <p class="text-xl text-red-600 dark:text-red-500">{{ $message }} Please re-upload again</p>
+                                             @enderror
+                                        @else
+                                        <svg aria-hidden="true" class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG or JPG  (MAX. 1024 kb)</p>
+                                        @endif
+                                    </div>
+                                    <input id="image" type="file" class="hidden" name="image"  onchange="previewImage()" />
+                                </label>
+                            </div>
+                        </div>
+
+                        </div>
                         <div class="mb-3 ">
                             <label for="body"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white  @error('body') text-red-600 dark:text-red-500 @enderror">Body</label>
@@ -93,22 +120,5 @@
 </div>
 <!-- javaScript -->
 
-
-<script>
-    // slugable
-    const title = document.querySelector('#title');
-    const slug = document.querySelector('#slug');
-
-    title.addEventListener('change', function () {
-        fetch('/dashboard/posts/checkSlug?title=' + title.value)
-            .then(response => response.json())
-            .then(data => slug.value = data.slug)
-    });
-    //remove fitur upload file trix-editor
-    document.addEventListener('trix-file-accept', function (e) {
-        e.preventDefault();
-    })
-
-</script>
 <script src="{{ asset('js\query.js') }}"></script>
 @endsection
